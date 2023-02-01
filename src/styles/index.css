@@ -1,0 +1,40 @@
+:root {
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+
+    color-scheme: light dark;
+
+    --primary: #14bbaa;
+    --secondary: #2c3c4c;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Lato", -apple-system, Roboto, "Helvetica Neue", Arial,
+        "Noto Sans", sans-serif;
+    background-color: #efeff5;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+svg {
+    vertical-align: middle;
+    font-size: 0.75em;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background: white;
+    width: 80%;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--secondary);
+    }
+}
