@@ -1,7 +1,7 @@
-nav {
+#nav {
     justify-content: space-between;
-    background-color: var(--secondary);
-    color: white;
+    background: var(--secondary);
+    color: var(--primary-text);
     display: flex;
     font-size: 1.3em;
     font-weight: bold;
@@ -13,27 +13,35 @@ nav {
     padding: 1.4em 2em;
 }
 
-nav svg {
+#nav #toggleTheme {
+    background-color: transparent;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    color: inherit;
+}
+
+#nav #toggleTheme:hover {
+    color: var(--secondary-text);
+}
+
+#nav svg {
     height: 100%;
 }
 
-nav.navbarShrink {
-    width: 22%;
+#nav.navbarShrink {
+    width: 29%;
     padding: 10px;
     top: 10px;
     justify-content: center;
     border-radius: 100px;
 }
 
-nav.navbarShrink > a {
+#nav.navbarShrink > a {
     display: none;
 }
 
-/* nav:not(.navbarShrink) > a {
-    animation: 3s backwards 1 fade;
-} */
-
-nav img {
+#nav img {
     max-height: 40px;
 }
 
@@ -46,10 +54,10 @@ nav img {
     /* flex-wrap: wrap; */
 }
 
-#links a {
+#links :is(a, button) {
     white-space: nowrap;
     align-items: center;
-    color: white;
+    color: inherit;
     margin: 0 0.5em;
     text-decoration: none;
 }
@@ -59,7 +67,7 @@ nav img {
 }
 
 #links a:hover {
-    color: var(--primary);
+    color: var(--secondary-text);
 }
 
 h3 {
@@ -67,7 +75,7 @@ h3 {
     text-transform: uppercase;
 }
 
-p {
+#nav p {
     margin: 3rem auto;
     max-width: 60em;
 }
@@ -77,7 +85,7 @@ p {
 }
 
 @media (max-width: 550px) {
-    nav > a {
+    #nav > a {
         display: none;
     }
 }

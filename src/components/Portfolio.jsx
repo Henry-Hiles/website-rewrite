@@ -1,26 +1,22 @@
+import { Link } from "react-router-dom"
+import projects from "../projects.json"
 import styles from "../styles/Portfolio.module.css"
+import { Divider } from "./Divider"
 
 export const Portfolio = () => (
-    <section id={styles.portfolio}>
+    <section id="portfolio">
         <h1>My Projects</h1>
-        <hr />
+        <Divider />
         <div className={styles.portfolioItems}>
-            <a asp-page="Projects/FlappyBird">
-                <img src="images/flappyThumb.jpg" alt="Quadratic Giveaways" />
-                <h2>Flappy Bird Online</h2>
-            </a>
-            <a asp-page="Projects/PokeAPI">
-                <img src="images/pokeAPIThumb.png" alt="PokeAPI Searcher" />
-                <h2>PokeAPI Searcher</h2>
-            </a>
-            <a asp-page="Projects/QuadraticBot">
-                <img src="images/quadraticBot.png" alt="Quadratic Giveaways" />
-                <h2>QuadraticBot 2.0</h2>
-            </a>
-            <a asp-page="Projects/Messaging">
-                <img src="images/messagingThumb.png" alt="Messaging" />
-                <h2>Messaging</h2>
-            </a>
+            {projects.map((project, index) => (
+                <Link to={`/project/${index}`} key={index}>
+                    <img
+                        src={`images/${project.thumbImage}`}
+                        alt={project.name}
+                    />
+                    <h2>Flappy Bird Online</h2>
+                </Link>
+            ))}
         </div>
     </section>
 )

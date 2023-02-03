@@ -1,15 +1,16 @@
 import styles from "../styles/About.module.css"
+import { Divider } from "./Divider"
 
 export const About = () => (
-    <section id={styles.about}>
+    <section className={styles.about} id="about">
         <h1>About</h1>
-        <hr />
+        <Divider />
         <p>
             Hello, my name is Henry Hiles, Full Stack Developer with React
             SolidJS, and Razorpages experience. I am also experienced with
             node.js, which I have a Discord bot with,{" "}
             <a
-                href="https://github.com/Henry-Hiles/QuadraticB ot2.0"
+                href="https://github.com/Henry-Hiles/QuadraticBot2.0"
                 target="_blank"
                 rel="noreferrer"
             >

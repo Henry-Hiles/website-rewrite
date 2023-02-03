@@ -1,17 +1,16 @@
 :root {
-    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-
-    color-scheme: light dark;
-
-    --primary: #14bbaa;
-    --secondary: #2c3c4c;
+    color-scheme: dark light;
     scroll-behavior: smooth;
+
+    --primary: #49627c;
+    --secondary: #364b5f;
+    --text-primary: white;
+    --secondary-text: #49627c;
 }
 
 body {
     font-family: "Lato", -apple-system, Roboto, "Helvetica Neue", Arial,
         "Noto Sans", sans-serif;
-    background-color: #efeff5;
     margin: 0;
 }
 
@@ -26,15 +25,30 @@ svg {
     font-size: 0.75em;
 }
 
-hr {
-    border: none;
-    height: 2px;
-    background: white;
-    width: 80%;
+section {
+    background: var(--secondary);
+    padding: 10rem 0;
 }
 
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: var(--secondary);
-    }
+section:nth-child(2n) {
+    background: var(--primary);
+}
+
+section > svg {
+    color: var(--primary);
+}
+
+section:nth-child(2n) > svg {
+    color: var(--secondary);
+}
+
+section h1 {
+    font-size: 2.5em;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+img {
+    max-width: 100%;
 }

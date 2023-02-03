@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react"
 import { AiFillGithub } from "react-icons/ai"
+import { BsFillMoonFill, BsFillSunFill, BsGithub } from "react-icons/bs"
 import { Link } from "react-router-dom"
 import { HashLink } from "react-router-hash-link"
 import styles from "../styles/Nav.module.css"
 
-export const Nav = () => {
+export const Nav = ({ lightTheme, setLightTheme }) => {
     const [y, setY] = useState(window.scrollY)
 
     useEffect(() => {
@@ -16,9 +17,9 @@ export const Nav = () => {
     }, [y])
 
     return (
-        <nav className={y == 0 ? "" : styles.navbarShrink}>
+        <nav id={styles.nav} className={y == 0 ? "" : styles.navbarShrink}>
             <Link to="/">
-                <img src="images/logo.png" alt="Henry Hiles" />
+                <img src="/images/logo.png" alt="Henry Hiles" />
             </Link>
             <ul id={styles.links}>
                 <li>
@@ -34,12 +35,20 @@ export const Nav = () => {
                     <HashLink to="/#contact">Contact</HashLink>
                 </li>
                 <li>
+                    <button
+                        id={styles.toggleTheme}
+                        onClick={() => setLightTheme((theme) => !theme)}
+                    >
+                        {lightTheme ? <BsFillMoonFill /> : <BsFillSunFill />}
+                    </button>
+                </li>
+                <li>
                     <a
                         target="_blank"
                         rel="noreferrer"
                         href="https://github.com/Henry-Hiles"
                     >
-                        <AiFillGithub />
+                        <BsGithub />
                     </a>
                 </li>
             </ul>

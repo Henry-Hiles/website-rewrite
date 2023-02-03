@@ -1,10 +1,12 @@
 import { RoundDivider } from "./RoundDivider"
 import styles from "../styles/Jumbo.module.css"
+import { Divider } from "./Divider"
 
 export const Jumbo = () => (
-    <section id={styles.jumbo}>
+    <section className={styles.jumbo}>
         <img src="images/logo.png" alt="Henry Hiles" />
-        <p>Full Stack .NET Developer & Discord Bot Developer</p>
+        <Divider />
+        <span>Full Stack .NET Developer & Discord Bot Developer</span>
         <RoundDivider />
     </section>
 )

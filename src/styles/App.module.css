@@ -2,6 +2,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     min-height: 100vh;
+    background: var(--secondary);
+    color: var(--text-primary);
+}
+
+.app.light {
+    --primary: #f8f9fb;
+    --secondary: white;
+    --text-primary: #434c5e;
+    --secondary-text: #49627c;
 }
