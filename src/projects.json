@@ -43,7 +43,7 @@
     {
         "name": "Video Chat",
         "github": "https://github.com/Henry-Hiles/Video-Chat",
-        "overview": "A simple Web-RTC powered video chat that uses PeerJS and Socket.IO. ",
+        "overview": "A simple Web-RTC powered video chat that uses PeerJS and Socket.IO.",
         "description": "A simple Web-RTC powered video chat, great for chatting with friends or family.",
         "technologies": "This project was built using EJS, PeerJS, Express, and Socket.IO.",
         "computerImages": ["videoChatComputer.png"],
