@@ -6,7 +6,7 @@
     font-size: 1.3em;
     font-weight: bold;
     position: sticky;
-    transition: width 2s, padding 0.5s, font-size 0.5s;
+    transition: padding 0.5s, font-size 0.5s;
     z-index: 1;
     top: 0;
     width: 100%;
@@ -30,11 +30,12 @@
 }
 
 #nav.navbarShrink {
-    width: 29%;
+    width: auto;
     padding: 10px;
     top: 10px;
     justify-content: center;
     border-radius: 100px;
+    border: 3px solid var(--primary);
 }
 
 #nav.navbarShrink > a {
@@ -70,7 +71,7 @@
     color: var(--secondary-text);
 }
 
-h3 {
+#nav h3 {
     text-align: center;
     text-transform: uppercase;
 }

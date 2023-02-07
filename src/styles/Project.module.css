@@ -1,6 +1,5 @@
 #container {
     width: 100%;
-    text-align: justify;
 }
 
 #container section:is(:first-child, :nth-child(2)) {
@@ -83,8 +82,8 @@
 
 #demoLink {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
 }
 
 #demoLink i {
@@ -98,4 +97,8 @@ section#demoLink .play {
     right: 50%;
     bottom: 50%;
     transform: translate(50%, 50%);
+}
+
+#github {
+    text-align: center;
 }

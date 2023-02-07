@@ -1,14 +1,13 @@
 [
     {
-        "name": "QuadraticBot",
-        "github": "https://github.com/Henry-Hiles/FlappyBird",
-        "overview": "A simple flappy bird game, made with html elements, CSS, and JavaScript. Made without using canvas.",
-        "description": "A simple flappy bird game, made with the technologies listed below. This project uses a modular design, with many JS files working together. It uses ES6 arrow functions instead of regular functions.",
-        "technologies": "This project was built using handcrafted HTML, CSS, and JavaScript, and canvas wasn't used. This project uses no bloated frontend technologies, making for quick loading times and fewer requests.",
-        "computerImages": ["flappyComputer1.png"],
+        "name": "QuadraticBot2.0",
+        "github": "https://github.com/Henry-Hiles/QuadraticBot2.0",
+        "overview": "A simple, user-friendly giveaway bot that uses slash commands and buttons.",
+        "description": "A simple, open-source, user-friendly Discord giveaway bot that uses the latest features, such as slash commands, timestamps, and buttons. It's a rewrite of my original closed-source Discord bot, Quadratic Giveaways. Invite it to your server here: https://discord.com/api/oauth2/authorize?client_id=930172444910702653&permissions=150528&scope=applications.commands%20bot.",
+        "technologies": "This project was built using Node.js and Discord.js.",
+        "computerImages": ["quadraticBotComputer.png"],
         "mobileImage": "flappyMobile.png",
-        "thumbImage": "flappyThumb.jpg",
-        "demoLink": "https://flappybird.henryhiles.com"
+        "thumbImage": "quadraticBot.png"
     },
     {
         "name": "Flappy Bird",
@@ -22,42 +21,42 @@
     },
     {
         "name": "PokeAPI Searcher",
-        "github": "https://github.com/Henry-Hiles/FlappyBird",
-        "overview": "A simple flappy bird game, made with html elements, CSS, and JavaScript. Made without using canvas.",
-        "description": "A simple flappy bird game, made with the technologies listed below. This project uses a modular design, with many JS files working together. It uses ES6 arrow functions instead of regular functions.",
+        "github": "https://github.com/Henry-Hiles/PokeAPI-Searcher",
+        "overview": "A simple website where you can search for Pokemon by type or Pokedex. Uses the PokeAPI for data.",
+        "description": "A simple website where you can search for Pokemon by type or Pokedex. Uses the PokeAPI for data. Made purely of HTML, CSS, and Vanilla Javascript. Uses the Fetch API for querying the PokeAPI.",
         "technologies": "This project was built using handcrafted HTML, CSS, and JavaScript, and canvas wasn't used. This project uses no bloated frontend technologies, making for quick loading times and fewer requests.",
-        "computerImages": ["flappyComputer1.png", "flappyComputer2.png"],
-        "mobileImage": "flappyMobile.png",
-        "thumbImage": "flappyThumb.jpg"
+        "computerImages": ["pokeAPIComputer1.png", "pokeAPIComputer2.png"],
+        "mobileImage": "pokeAPIMobile.png",
+        "thumbImage": "pokeAPIThumb.png"
     },
     {
         "name": "Messaging",
-        "github": "https://github.com/Henry-Hiles/FlappyBird",
-        "overview": "A simple flappy bird game, made with html elements, CSS, and JavaScript. Made without using canvas.",
-        "description": "A simple flappy bird game, made with the technologies listed below. This project uses a modular design, with many JS files working together. It uses ES6 arrow functions instead of regular functions.",
-        "technologies": "This project was built using handcrafted HTML, CSS, and JavaScript, and canvas wasn't used. This project uses no bloated frontend technologies, making for quick loading times and fewer requests.",
-        "computerImages": ["flappyComputer1.png", "flappyComputer2.png"],
-        "mobileImage": "flappyMobile.png",
-        "thumbImage": "flappyThumb.jpg"
+        "github": "https://github.com/Henry-Hiles/Messaging",
+        "overview": "A messaging website where multiple users can chat together.",
+        "description": "A simple, open-source, online chat room where you can join online chat rooms, or create your own.",
+        "technologies": "This project was built using handcrafted Javascript, as well as Node.js, Socket.io, and Express.",
+        "computerImages": ["messagingComputer.png"],
+        "mobileImage": "messagingMobile.png",
+        "thumbImage": "messagingThumb.png",
+        "demoLink": "https://chat.henryhiles.com"
     },
     {
         "name": "Video Chat",
-        "github": "https://github.com/Henry-Hiles/FlappyBird",
-        "overview": "A simple flappy bird game, made with html elements, CSS, and JavaScript. Made without using canvas.",
-        "description": "A simple flappy bird game, made with the technologies listed below. This project uses a modular design, with many JS files working together. It uses ES6 arrow functions instead of regular functions.",
-        "technologies": "This project was built using handcrafted HTML, CSS, and JavaScript, and canvas wasn't used. This project uses no bloated frontend technologies, making for quick loading times and fewer requests.",
-        "computerImages": ["flappyComputer1.png", "flappyComputer2.png"],
-        "mobileImage": "flappyMobile.png",
-        "thumbImage": "flappyThumb.jpg"
+        "github": "https://github.com/Henry-Hiles/Video-Chat",
+        "overview": "A simple Web-RTC powered video chat that uses PeerJS and Socket.IO. ",
+        "description": "A simple Web-RTC powered video chat, great for chatting with friends or family.",
+        "technologies": "This project was built using EJS, PeerJS, Express, and Socket.IO.",
+        "computerImages": ["videoChatComputer.png"],
+        "thumbImage": "videoChatThumb.png",
+        "demoLink": "https://video.henryhiles.com"
     },
     {
         "name": "MentalMath",
-        "github": "https://github.com/Henry-Hiles/FlappyBird",
-        "overview": "A simple flappy bird game, made with html elements, CSS, and JavaScript. Made without using canvas.",
-        "description": "A simple flappy bird game, made with the technologies listed below. This project uses a modular design, with many JS files working together. It uses ES6 arrow functions instead of regular functions.",
-        "technologies": "This project was built using handcrafted HTML, CSS, and JavaScript, and canvas wasn't used. This project uses no bloated frontend technologies, making for quick loading times and fewer requests.",
-        "computerImages": ["flappyComputer1.png", "flappyComputer2.png"],
-        "mobileImage": "flappyMobile.png",
-        "thumbImage": "flappyThumb.jpg"
+        "github": "https://github.com/Henry-Hiles/MentalMath",
+        "overview": "A simple project to help with learning addition and subtraction.",
+        "description": "A simple project to help with learning addition and subtraction. You can change the amount of numbers, and switch between addition and subtraction modes.",
+        "technologies": "This project was built using React and CSS Modules.",
+        "computerImages": ["mentalMathComputer.png"],
+        "thumbImage": "mentalMathThumb.webp"
     }
 ]

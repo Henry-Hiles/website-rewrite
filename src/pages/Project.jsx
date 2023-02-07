@@ -1,3 +1,4 @@
+import Linkify from "react-linkify"
 import { useParams } from "react-router-dom"
 import { Divider } from "../components/Divider"
 import { RoundDivider } from "../components/RoundDivider"
@@ -21,50 +22,65 @@ export const Project = () => {
                     <div className={styles.longDescription}>
                         <h2>Description</h2>
                         <Divider />
-                        <p>{project.description}</p>
-                        <p>{project.technologies}</p>
+                        <Linkify>
+                            <p>
+                                {project.description} {project.technologies}{" "}
+                                {project.github && (
+                                    <>
+                                        This projects source code is located
+                                        here:{" "}
+                                        <a
+                                            href={project.github}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            {project.name}'s Github
+                                        </a>
+                                        .
+                                    </>
+                                )}
+                            </p>
+                        </Linkify>
                     </div>
                     <div className={styles.screenshots}>
-                        {project.computerImages.map((imageUrl, index) => (
-                            <div className={styles.computer} key={index}>
-                                <img
-                                    src={`/images/${imageUrl}`}
-                                    alt={`Image of ${project.name}`}
-                                />
-                            </div>
-                        ))}
-
-                        {/* <div className={styles.mobile}>
+                        <a
+                            href={project.demoLink}
+                            target="_blank"
+                            rel="noreferrer"
+                            className={styles.computer}
+                        >
                             <img
-                                src={`/images/${project.mobileImage}`}
+                                src={`/images/${project.computerImages[0]}`}
                                 alt={`Image of ${project.name}`}
                             />
-                        </div> */}
+                        </a>
                     </div>
                 </div>
-                <RoundDivider />
+                {project.demoLink && <RoundDivider />}
             </section>
 
-            <section id={styles.demoLink}>
-                <h1>Live Demo</h1>
-                <Divider />
-                <a
-                    href={project.demoLink}
-                    target="_blank"
-                    rel="noreferrer"
-                    className={styles.computer}
-                >
-                    <img
-                        src={`/images/${project.computerImages[0]}`}
-                        alt="Image of Messaging Project"
-                    />
-                    <img
-                        src="/images/play.png"
-                        className={styles.play}
-                        alt="Go to PokeAPI Searcher Demo"
-                    />
-                </a>
-            </section>
+            {project.demoLink && (
+                <section id={styles.demoLink}>
+                    <h1>Live Demo</h1>
+                    <Divider />
+                    <a
+                        href={project.demoLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={styles.computer}
+                    >
+                        <img
+                            src={`/images/${project.computerImages[0]}`}
+                            alt={`Image of ${project.name}`}
+                        />
+                        <img
+                            src="/images/play.png"
+                            className={styles.play}
+                            alt="Go to demo"
+                        />
+                    </a>
+                </section>
+            )}
         </div>
     )
 }

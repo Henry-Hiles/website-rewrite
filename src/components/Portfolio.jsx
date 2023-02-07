@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { HashLink } from "react-router-hash-link"
 import projects from "../projects.json"
 import styles from "../styles/Portfolio.module.css"
 import { Divider } from "./Divider"
@@ -9,13 +9,13 @@ export const Portfolio = () => (
         <Divider />
         <div className={styles.portfolioItems}>
             {projects.map((project, index) => (
-                <Link to={`/project/${index}`} key={index}>
+                <HashLink to={`/project/${index}#`} key={index}>
                     <img
-                        src={`images/${project.thumbImage}`}
+                        src={`/images/${project.thumbImage}`}
                         alt={project.name}
                     />
-                    <h2>Flappy Bird Online</h2>
-                </Link>
+                    <h2 className={styles.projectName}>{project.name}</h2>
+                </HashLink>
             ))}
         </div>
     </section>

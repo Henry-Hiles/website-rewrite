@@ -8,7 +8,7 @@ export const About = () => (
         <p>
             Hello, my name is Henry Hiles, Full Stack Developer with React
             SolidJS, and Razorpages experience. I am also experienced with
-            node.js, which I have a Discord bot with,{" "}
+            node.js, which I have created a Discord bot with,{" "}
             <a
                 href="https://github.com/Henry-Hiles/QuadraticBot2.0"
                 target="_blank"
