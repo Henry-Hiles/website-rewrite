@@ -13,13 +13,13 @@ export const App = () => {
     )
 
     return (
-        <div className={`${styles.app} ${lightTheme ? styles.light : ""}`}>
+        <main className={`${styles.app} ${lightTheme ? styles.light : ""}`}>
             <Nav lightTheme={lightTheme} setLightTheme={setLightTheme} />
             <Routes>
-                <Route index element={<Home />} />
+                <Route index element={<Home lightTheme={lightTheme} />} />
                 <Route path="project/:id" element={<Project />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
-        </div>
+        </main>
     )
 }

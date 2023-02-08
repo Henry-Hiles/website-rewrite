@@ -1,3 +1,11 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 50px;
+}
+
 .about {
     text-align: center;
     font-size: large;
@@ -10,4 +18,11 @@
 .about p {
     margin: 14px 0 40px;
     width: 30em;
+    max-width: 55%;
+}
+
+.textArticle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

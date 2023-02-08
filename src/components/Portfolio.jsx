@@ -5,18 +5,18 @@ import { Divider } from "./Divider"
 
 export const Portfolio = () => (
     <section id="portfolio">
-        <h1>My Projects</h1>
+        <h2>My Projects</h2>
         <Divider />
-        <div className={styles.portfolioItems}>
+        <article className={styles.portfolioItems}>
             {projects.map((project, index) => (
                 <HashLink to={`/project/${index}#`} key={index}>
                     <img
                         src={`/images/${project.thumbImage}`}
                         alt={project.name}
                     />
-                    <h2 className={styles.projectName}>{project.name}</h2>
+                    <h3 className={styles.projectName}>{project.name}</h3>
                 </HashLink>
             ))}
-        </div>
+        </article>
     </section>
 )

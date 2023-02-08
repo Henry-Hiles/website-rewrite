@@ -7,6 +7,17 @@ import styles from "../styles/Nav.module.css"
 
 export const Nav = ({ lightTheme, setLightTheme }) => {
     const [y, setY] = useState(window.scrollY)
+    const [width, setWidth] = useState(window.innerWidth)
+
+    useEffect(() => {
+        window.addEventListener("resize", () => setWidth(window.innerWidth))
+
+        return () => {
+            window.removeEventListener("resize", () =>
+                setWidth(window.innerWidth)
+            )
+        }
+    })
 
     useEffect(() => {
         window.addEventListener("scroll", () => setY(window.scrollY))

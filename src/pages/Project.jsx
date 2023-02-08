@@ -19,7 +19,7 @@ export const Project = () => {
             </section>
             <section id={styles.details}>
                 <div className={styles.row}>
-                    <div className={styles.longDescription}>
+                    <article className={styles.longDescription}>
                         <h2>Description</h2>
                         <Divider />
                         <Linkify>
@@ -41,8 +41,8 @@ export const Project = () => {
                                 )}
                             </p>
                         </Linkify>
-                    </div>
-                    <div className={styles.screenshots}>
+                    </article>
+                    <article className={styles.screenshots}>
                         <a
                             href={project.demoLink}
                             target="_blank"
@@ -54,14 +54,14 @@ export const Project = () => {
                                 alt={`Image of ${project.name}`}
                             />
                         </a>
-                    </div>
+                    </article>
                 </div>
                 {project.demoLink && <RoundDivider />}
             </section>
 
             {project.demoLink && (
                 <section id={styles.demoLink}>
-                    <h1>Live Demo</h1>
+                    <h2>Live Demo</h2>
                     <Divider />
                     <a
                         href={project.demoLink}

@@ -9,8 +9,15 @@
     transition: padding 0.5s, font-size 0.5s;
     z-index: 1;
     top: 0;
-    width: 100%;
+    max-width: 100%;
+    overflow: scroll;
     padding: 1.4em 2em;
+}
+
+@media (max-width: 600px) {
+    #nav.navbarShrink {
+        display: none;
+    }
 }
 
 #nav #toggleTheme {

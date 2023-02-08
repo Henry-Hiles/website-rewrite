@@ -3,8 +3,8 @@ import { FaStar } from "react-icons/fa"
 
 export const Divider = () => (
     <div className={styles.container}>
-        <div className={styles.dividerIcon}>
+        <span className={styles.dividerIcon}>
             <FaStar />
-        </div>
+        </span>
     </div>
 )
