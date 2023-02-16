@@ -10,7 +10,8 @@
     z-index: 1;
     top: 0;
     max-width: 100%;
-    overflow: scroll;
+    overflow: auto;
+    gap: 20px;
     padding: 1.4em 2em;
 }
 
@@ -20,7 +21,7 @@
     }
 }
 
-#nav #toggleTheme {
+#nav button {
     background-color: transparent;
     border: none;
     font-size: 1em;
@@ -28,7 +29,7 @@
     color: inherit;
 }
 
-#nav #toggleTheme:hover {
+#nav button:hover {
     color: var(--secondary-text);
 }
 
@@ -40,13 +41,8 @@
     width: auto;
     padding: 10px;
     top: 10px;
-    justify-content: center;
     border-radius: 100px;
     border: 3px solid var(--primary);
-}
-
-#nav.navbarShrink > a {
-    display: none;
 }
 
 #nav img {

@@ -1,28 +1,32 @@
 .row {
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+    align-items: center;
+    padding: 20px;
+    gap: 5rem;
     justify-content: center;
-    gap: 50px;
+    width: 100%;
 }
 
 .about {
-    text-align: center;
-    font-size: large;
+    text-align: justify;
+    font-size: 1.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 40px;
 }
 
-.about p {
+.textArticle p {
     margin: 14px 0 40px;
-    width: 30em;
-    max-width: 55%;
+    max-width: 40rem;
 }
 
-.textArticle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.row img {
+    min-width: 400px;
+}
+
+@media (max-width: 1500px) {
+    .row {
+        flex-direction: column;
+    }
 }

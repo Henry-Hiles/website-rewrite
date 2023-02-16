@@ -8,8 +8,9 @@
 }
 
 .app.light {
-    --primary: #f8f9fb;
-    --secondary: white;
-    --text-primary: #434c5e;
-    --secondary-text: #49627c;
+    --primary: hsl(220, 27%, 98%);
+    --secondary: hsl(0, 0%, 100%);
+    --secondary-hover: hsl(0, 0%, 80%);
+    --text-primary: hsl(220, 17%, 32%);
+    --secondary-text: hsl(211, 26%, 39%);
 }

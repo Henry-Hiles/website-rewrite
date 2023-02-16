@@ -1,5 +1,6 @@
 import Linkify from "react-linkify"
 import { useParams } from "react-router-dom"
+import { ButtonLink } from "../components/ButtonLink"
 import { Divider } from "../components/Divider"
 import { RoundDivider } from "../components/RoundDivider"
 import projects from "../projects.json"
@@ -11,8 +12,8 @@ export const Project = () => {
 
     return (
         <div id={styles.container}>
-            <section>
-                <h1>{project.name}</h1>
+            <section id={styles.jumbo}>
+                <h1 className={styles.title}>{project.name}</h1>
                 <Divider />
                 <p className={styles.overview}>{project.overview}</p>
                 <RoundDivider />
@@ -24,49 +25,40 @@ export const Project = () => {
                         <Divider />
                         <Linkify>
                             <p>
-                                {project.description} {project.technologies}{" "}
-                                {project.github && (
-                                    <>
-                                        This projects source code is located
-                                        here:{" "}
-                                        <a
-                                            href={project.github}
-                                            target="_blank"
-                                            rel="noreferrer"
-                                        >
-                                            {project.name}'s Github
-                                        </a>
-                                        .
-                                    </>
-                                )}
+                                {project.description} {project.technologies}
                             </p>
+                            <div className={styles.buttonRow}>
+                                {project.github && (
+                                    <ButtonLink href={project.github} newTab>
+                                        Source Code
+                                    </ButtonLink>
+                                )}
+                                {project.demoLink && (
+                                    <ButtonLink href={project.demoLink} newTab>
+                                        Go to demo
+                                    </ButtonLink>
+                                )}
+                            </div>
                         </Linkify>
                     </article>
-                    <article className={styles.screenshots}>
-                        <a
-                            href={project.demoLink}
-                            target="_blank"
-                            rel="noreferrer"
-                            className={styles.computer}
-                        >
-                            <img
-                                src={`/images/${project.computerImages[0]}`}
-                                alt={`Image of ${project.name}`}
-                            />
-                        </a>
+                    <article className={styles.image}>
+                        <img
+                            src={`/images/${project.computerImages[0]}`}
+                            alt={`Image of ${project.name}`}
+                            className={styles.screenshot}
+                        />
                     </article>
                 </div>
-                {project.demoLink && <RoundDivider />}
             </section>
 
-            {project.demoLink && (
+            {/* {project.demoLink && (
                 <section id={styles.demoLink}>
                     <h2>Live Demo</h2>
                     <Divider />
                     <a
                         href={project.demoLink}
-                        target="_blank"
-                        rel="noreferrer"
+                        // target="_blank"
+                        // rel="noreferrer"
                         className={styles.computer}
                     >
                         <img
@@ -80,7 +72,7 @@ export const Project = () => {
                         />
                     </a>
                 </section>
-            )}
+            )} */}
         </div>
     )
 }

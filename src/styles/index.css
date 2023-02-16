@@ -2,10 +2,11 @@
     color-scheme: dark light;
     scroll-behavior: smooth;
 
-    --primary: #49627c;
-    --secondary: #364b5f;
-    --text-primary: white;
-    --secondary-text: #49627c;
+    --primary: hsl(211, 26%, 39%);
+    --secondary: hsl(209, 28%, 29%);
+    --secondary-hover: hsl(209, 28%, 19%);
+    --text-primary: hsl(0, 0%, 100%);
+    --secondary-text: hsl(211, 26%, 39%);
 }
 
 body {
@@ -42,7 +43,7 @@ section:nth-child(2n) > svg {
     color: var(--secondary);
 }
 
-section h2 {
+section > :is(h1, h2) {
     font-size: 2.5em;
     margin: 0;
     text-align: center;

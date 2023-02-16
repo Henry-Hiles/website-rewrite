@@ -1,23 +1,10 @@
 import { useState, useEffect } from "react"
-import { AiFillGithub } from "react-icons/ai"
 import { BsFillMoonFill, BsFillSunFill, BsGithub } from "react-icons/bs"
-import { Link } from "react-router-dom"
 import { HashLink } from "react-router-hash-link"
 import styles from "../styles/Nav.module.css"
 
 export const Nav = ({ lightTheme, setLightTheme }) => {
     const [y, setY] = useState(window.scrollY)
-    const [width, setWidth] = useState(window.innerWidth)
-
-    useEffect(() => {
-        window.addEventListener("resize", () => setWidth(window.innerWidth))
-
-        return () => {
-            window.removeEventListener("resize", () =>
-                setWidth(window.innerWidth)
-            )
-        }
-    })
 
     useEffect(() => {
         window.addEventListener("scroll", () => setY(window.scrollY))
@@ -29,9 +16,6 @@ export const Nav = ({ lightTheme, setLightTheme }) => {
 
     return (
         <nav id={styles.nav} className={y == 0 ? "" : styles.navbarShrink}>
-            <Link to="/">
-                <img src="/images/logo.png" alt="Henry Hiles" />
-            </Link>
             <ul id={styles.links}>
                 <li>
                     <HashLink to="/#">Home</HashLink>
@@ -41,9 +25,6 @@ export const Nav = ({ lightTheme, setLightTheme }) => {
                 </li>
                 <li>
                     <HashLink to="/#about">About Me</HashLink>
-                </li>
-                <li>
-                    <HashLink to="/#contact">Contact</HashLink>
                 </li>
                 <li>
                     <button

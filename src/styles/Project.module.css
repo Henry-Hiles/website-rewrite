@@ -2,30 +2,35 @@
     width: 100%;
 }
 
-#container section:is(:first-child, :nth-child(2)) {
-    padding: 20px 0 0;
-}
-
 .overview {
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    font-size: x-large;
+    text-align: center;
 }
 
-.screenshots {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 150px;
-    justify-content: center;
-    align-items: center;
+.screenshot {
+    width: 40%;
+    padding: 20px;
+}
+
+#jumbo {
+    padding: 3em 0 0;
 }
 
 .longDescription {
-    display: flex;
     font-size: 1.5rem;
     padding: 20px;
-    width: 50%;
-    flex-direction: column;
+    text-align: justify;
+    max-width: 700px;
+}
+
+.image {
+    max-width: 900px;
+}
+
+.image img {
+    width: 100%;
 }
 
 .longDescription h2 {
@@ -33,72 +38,38 @@
     justify-content: center;
 }
 
-.computer {
-    position: relative;
-    display: block;
-    width: 640px;
+.title {
+    text-align: center;
 }
 
-#details .row {
-    display: flex;
-    gap: 4rem;
-    padding: 5rem;
-    justify-content: space-between;
-}
-
-.mobile {
-    position: relative;
-    height: 454px;
-    width: 250px;
-}
-
-:is(.computer, .mobile) img {
-    width: 100%;
-    height: 100%;
-}
-
-/* .computer:after {
-    background-image: url(../images/computer.png);
-    top: -10px;
-    left: -20px;
-    width: 110%;
-    height: 140%;
-}
-
-.mobile:after {
-    background-image: url(../images/phone.png);
-    top: -20px;
-    left: 0px;
-    width: 100%;
-    height: 110%;
-} */
-
-.computer:after,
-.mobile:after {
-    content: "";
-    position: absolute;
-    background-size: 100% 100%;
-}
-
-#demoLink {
+.row {
     display: flex;
     align-items: center;
-    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 4rem;
 }
 
-#demoLink i {
-    margin: 30px;
+.row > * {
+    flex: 1;
 }
 
-section#demoLink .play {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    right: 50%;
-    bottom: 50%;
-    transform: translate(50%, 50%);
+#details {
+    padding: 2rem;
 }
 
-#github {
-    text-align: center;
+@media (max-width: 1300px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+.buttonRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.buttonRow > * {
+    flex: 1;
 }

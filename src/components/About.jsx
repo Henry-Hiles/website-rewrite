@@ -18,10 +18,10 @@ export const About = ({ lightTheme }) => (
             </article>
             <article className={styles.textArticle}>
                 <p>
-                    Hello, my name is Henry Hiles, Full Stack Developer with
-                    React SolidJS, and Razorpages experience. I am also
-                    experienced with node.js, which I have created a Discord bot
-                    with,{" "}
+                    Hello, my name is Henry Hiles, Full Stack Developer. I have
+                    extensive experience with React, SolidJS, Node.js, and
+                    ASP.NET Razor Pages. I have used my Node.js knowledge to
+                    create{" "}
                     <a
                         href="https://github.com/Henry-Hiles/QuadraticBot2.0"
                         target="_blank"
@@ -29,18 +29,17 @@ export const About = ({ lightTheme }) => (
                     >
                         QuadraticBot 2.0
                     </a>
-                    .
+                    , a giveaway bot for discord.
                 </p>
                 <p>
-                    Check out{" "}
+                    For more projects, check out{" "}
                     <a
                         href="https://github.com/Henry-Hiles"
                         target="_blank"
                         rel="noreferrer"
                     >
-                        my GitHub profile
-                    </a>{" "}
-                    to see all of my projects.
+                        my GitHub profile.
+                    </a>
                 </p>
             </article>
             <article>
